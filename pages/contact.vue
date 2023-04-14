@@ -5,8 +5,9 @@
     </h3>
 
     <div class="grid lg:grid-cols-2 items-center pt-10">
-      <div>
-        <img src="~/assets/images/personal_email.svg" alt="Personal Email" style="max-width: 550px; width: 100%;" />
+      <div class="mb-12 flex justify-center">
+        <img src="~/assets/images/personal_email.svg" alt="Personal Email"
+          class="w-[100%] max-w-[300px] md:max-w-[400px] lg:max-w-[550px]" />
       </div>
 
       <div>

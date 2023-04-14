@@ -23,9 +23,9 @@
 
     <h3 class="font-semibold mt-20 mb-8 text-xl">Kenali Tim Kami</h3>
 
-    <div class="flex gap-8">
+    <div class="flex flex-col lg:flex-row gap-8">
       <div class="">
-        <img :src="SheilaJpg" style="max-width: 295px;" />
+        <img :src="SheilaJpg" class="max-w-[200px] lg:max-w-[295px]" />
       </div>
       <div>
         <p class="font-semibold text-xl mb-4">Sheila Parubets</p>
