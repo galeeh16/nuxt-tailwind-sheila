@@ -12,30 +12,34 @@
 
       <div>
         <form @submit.prevent="handleSubmit" method="post" spellcheck="false">
-          <div class="mb-6">
-            <label for="fullName" class="block mb-2 text-sm font-medium text-slate-600">Nama Lengkap *</label>
-            <input type="text" id="fullName" autocomplete="off"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:bg-white focus:border-primary block w-full p-2.5 outline-none"
-              placeholder="Masukkan Nama Lengkap">
-          </div>
-          <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm font-medium text-slate-600">Email *</label>
-            <input type="text" id="email"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:bg-white focus:border-primary block w-full p-2.5 outline-none"
-              placeholder="Masukkan Email">
-          </div>
-          <div class="mb-6">
-            <label for="noHp" class="block mb-2 text-sm font-medium text-slate-600">Nomor Handphone *</label>
-            <input type="text" id="noHp"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:bg-white focus:border-primary block w-full p-2.5 outline-none"
-              placeholder="Masukkan Nomor Handphone">
-          </div>
-          <div class="mb-6">
-            <label for="pesan" class="block mb-2 text-sm font-medium text-slate-600">Pesan *</label>
-            <textarea type="text" id="pesan" autocomplete="off"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:bg-white focus:border-primary block w-full p-2.5 outline-none resize-none"
-              rows="4" placeholder="Masukkan Pesan"></textarea>
-          </div>
+          <InputText type="text" label="Nama Lengkap *" v-model="contact.fullName" placeholder="Masukkan Nama Lengkap"
+            maxlength="50" :isInvalid="v$.fullName.$errors.length > 0">
+            <div v-if="v$.fullName.$errors.length > 0" class="text-red-500 mt-1 text-sm">
+              {{ v$.fullName.$errors[0].$message }}
+            </div>
+          </InputText>
+
+          <InputText type="text" label="Email *" v-model="contact.email" placeholder="Masukkan Email"
+            :isInvalid="v$.pesan.$errors.length > 0">
+            <div v-if="v$.email.$errors.length > 0" class="text-red-500 mt-1 text-sm">
+              {{ v$.email.$errors[0].$message }}
+            </div>
+          </InputText>
+
+          <InputText type="text" label="Nomor Handphone *" v-model="contact.noHp" placeholder="Masukkan Nomor Handphone"
+            :isInvalid="v$.noHp.$errors.length > 0">
+            <div v-if="v$.noHp.$errors.length > 0" class="text-red-500 mt-1 text-sm">
+              {{ v$.noHp.$errors[0].$message }}
+            </div>
+          </InputText>
+
+          <InputArea label="Pesan *" v-model="contact.pesan" placeholder="Masukkan Pesan"
+            :isInvalid="v$.pesan.$errors.length > 0">
+            <div v-if="v$.pesan.$errors.length > 0" class="text-red-500 mt-1 text-sm">
+              {{ v$.pesan.$errors[0].$message }}
+            </div>
+          </InputArea>
+
           <div class="mb-6">
             <button type="submit"
               class="text-white bg-primary hover:bg-[#cf5040] font-medium rounded-lg text-sm px-7 py-2.5 mr-2 mb-2 ">Submit</button>
@@ -48,8 +52,56 @@
 
 <script setup>
 import { container } from '~/constants/style'
+import useVuelidate from '@vuelidate/core'
+import { required, email, helpers, minLength, maxLength, numeric } from '@vuelidate/validators';
+
+const contact = ref({
+  fullName: '',
+  email: '',
+  noHp: '',
+  pesan: ''
+})
+
+const rules = {
+  fullName: {
+    required: helpers.withMessage('Harap isi Nama Lengkap', required),
+    minLength: helpers.withMessage(({ $params }) => `Nama Lengkap minimal ${$params.min} karakter`, minLength(3)),
+    maxLength: helpers.withMessage(({ $params }) => `Nama Lengkap maksimal ${$params.max} karakter`, maxLength(50)),
+    $autoDirty: true
+  },
+  email: {
+    required: helpers.withMessage('Harap isi Email', required),
+    email: helpers.withMessage('Email tidak valid', email),
+    $autoDirty: true,
+  },
+  noHp: {
+    required: helpers.withMessage('Harap isi Nomor Handphone', required),
+    numeric: helpers.withMessage('Nomor Handphone tidak valid', numeric),
+    minLength: helpers.withMessage(({ $params }) => `Nomor Handphone minimal ${$params.min} karakter`, minLength(10)),
+    maxLength: helpers.withMessage(({ $params }) => `Nomor Handphone maksimal ${$params.max} karakter`, maxLength(15)),
+    $autoDirty: true,
+  },
+  pesan: {
+    required: helpers.withMessage('Harap isi Pesan', required),
+    $autoDirty: true,
+  },
+}
+
+const v$ = useVuelidate(rules, contact)
 
 const handleSubmit = () => {
   console.log('handle submit')
+
+  v$.value.$touch();
+
+  if (v$.value.$invalid) return;
+
+  contact.value.fullName = ''
+  contact.value.email = ''
+  contact.value.noHp = ''
+  contact.value.pesan = ''
+
+  v$.value.$reset() // clear message dan reset
+
 }
 </script>
