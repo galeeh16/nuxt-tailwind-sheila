@@ -5,8 +5,9 @@
     </ClientOnly>
 
     <div :class="container" class="pt-8 lg:pt-14">
-      <h3 class="text-center font-semibold text-primary mb-8 lg:mb-12 text-xl lg:text-3xl font-raleway">Mengapa Dubai?
-      </h3>
+      <!-- <h3 class="text-center font-semibold text-primary mb-8 lg:mb-12 text-xl lg:text-3xl font-raleway">Mengapa Dubai?
+      </h3> -->
+      <Heading3 title="Mengapa Dubai?" />
 
       <h5 class="mb-2 text-gray-900 font-semibold text-lg">1 - Gateway to the West and the East</h5>
       <p>Dubai is strategically located as a gateway to Europe, Africa, and the Asia-Pacific region; making it just a

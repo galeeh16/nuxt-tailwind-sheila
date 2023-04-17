@@ -3,13 +3,34 @@
     <swiper :modules="modules" :slides-per-view="1" :space-between="50" navigation :pagination="{ clickable: true }"
       effect="fade" :scrollbar="{ draggable: true, hide: true }" :loop="true">
       <swiper-slide>
-        <img src="~/assets/images/dubai2.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
+        <div class="relative">
+          <img src="~/assets/images/dubai2.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
+          <div
+            class="px-5 py-4 lg:px-14 lg:py-8 text-gray-200 absolute bottom-[80px] md:bottom-[120px] lg:bottom-[200px] left-1/2 z-[5] bg-black/50 inline-flex rounded translate-x-[-50%] text-center font-bold text-3xl md:text-5xl lg:text-6xl">
+            Moving to Dubai? <br />
+            Talk to Us
+          </div>
+        </div>
       </swiper-slide>
       <swiper-slide>
-        <img src="~/assets/images/dubai1.webp" class="h-[470px] lg:h-[780px] w-full object-cover" loading="lazy" />
+        <div class="relative">
+          <img src="~/assets/images/dubai1.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
+          <div
+            class="px-5 py-4 lg:px-14 lg:py-8 text-gray-200 absolute bottom-[80px] md:bottom-[120px] lg:bottom-[200px] left-1/2 z-[5] bg-black/50 inline-flex rounded translate-x-[-50%] text-center font-bold text-3xl md:text-5xl lg:text-6xl">
+            Invest to Dubai? <br />
+            Talk to Us
+          </div>
+        </div>
       </swiper-slide>
       <swiper-slide>
-        <img src="~/assets/images/dubai3.webp" class="h-[470px] lg:h-[780px] w-full object-cover" loading="lazy" />
+        <div class="relative">
+          <img src="~/assets/images/dubai3.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
+          <div
+            class="px-5 py-4 lg:px-14 lg:py-8 text-gray-200 absolute bottom-[80px] md:bottom-[120px] lg:bottom-[200px] left-1/2 z-[5] bg-black/50 inline-flex rounded translate-x-[-50%] text-center font-bold text-3xl md:text-5xl lg:text-6xl">
+            Visiting Dubai? <br />
+            Talk to Us
+          </div>
+        </div>
       </swiper-slide>
     </swiper>
   </ClientOnly>
