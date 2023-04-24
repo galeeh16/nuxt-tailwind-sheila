@@ -11,6 +11,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   color: #373a3e;
+  @apply bg-gray-50;
 }
 
 p {

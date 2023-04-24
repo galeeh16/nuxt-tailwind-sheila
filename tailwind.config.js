@@ -13,6 +13,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#ef5744',
+        primaryHover: '#cf4d3e',
+        softPrimary: 'rgba(239, 87, 68, .2)',
       },
       fontFamily: {
         raleway: ['"Raleway"', 'sans-serif'],

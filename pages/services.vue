@@ -67,4 +67,8 @@
 
 <script setup>
 import { container } from '~/constants/style';
+
+useHead({
+  title: 'Rellocate Dubai - Services'
+})
 </script>

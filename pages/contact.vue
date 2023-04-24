@@ -4,7 +4,7 @@
     <h3 class="text-center font-semibold text-primary lg:mb-12 text-xl lg:text-3xl font-raleway">Hubungi Kami
     </h3>
 
-    <div class="grid lg:grid-cols-2 items-center pt-10">
+    <div class="grid lg:grid-cols-2 gap-4 lg:gap-20 items-center pt-10">
       <div class="mb-12 flex justify-center">
         <img src="~/assets/images/personal_email.svg" alt="Personal Email"
           class="w-[100%] max-w-[300px] md:max-w-[400px] lg:max-w-[550px]" />
@@ -40,9 +40,9 @@
             </div>
           </InputArea>
 
-          <div class="mb-6">
+          <div class="mb-6 mt-4 lg:mt-8 flex justify-center">
             <button type="submit"
-              class="text-white bg-primary hover:bg-[#cf5040] font-medium rounded-lg text-sm px-7 py-2.5 mr-2 mb-2 ">Submit</button>
+              class="text-white bg-primary hover:bg-[#cf5040] font-medium tracking-widest text-sm rounded-lg px-7 py-2.5 mr-2 mb-2 ">SUBMIT</button>
           </div>
         </form>
       </div>
@@ -54,6 +54,10 @@
 import { container } from '~/constants/style'
 import useVuelidate from '@vuelidate/core'
 import { required, email, helpers, minLength, maxLength, numeric } from '@vuelidate/validators';
+
+useHead({
+  title: 'Rellocate Dubai - Contact Us'
+})
 
 const contact = ref({
   fullName: '',

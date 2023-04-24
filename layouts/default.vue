@@ -6,7 +6,7 @@
 
   <ClientOnly>
     <transition name="fadetop">
-      <div id="pagetop" class="fixed p-2 bg-primary text-white rounded-full hover:bg-[#d24b39]"
+      <div id="pagetop" class="fixed p-2 bg-primary text-white rounded-full hover:bg-primaryHover"
         style="bottom: 34px; right: 34px; cursor: pointer;" v-show="scY > 300" @click="toTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

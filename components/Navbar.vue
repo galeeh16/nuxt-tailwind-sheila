@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-white border-gray-200  py-4 lg:py-8 fixed z-30 top-0 left-0 right-0 md:block border-b border-b-gray-100">
+  <nav class="bg-white border-gray-200  py-4 lg:py-8 fixed z-30 top-0 left-0 right-0 md:block border-b border-b-gray-200">
     <div class="flex flex-wrap items-center justify-between" :class="container">
       <a href="/" class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
@@ -21,22 +21,23 @@
 
       <div class="hidden w-full bg-white md:block md:w-auto" id="navbar-default">
         <ul
-          class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+          class="flex flex-col lg:items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
           <li>
             <nuxt-link to="/" class="block py-2 pl-3 pr-4 rounded"
-              :class="route.path == '/' ? 'text-primary' : ''">Beranda</nuxt-link>
+              :class="route.path == '/' ? 'text-primary' : 'text-gray-600'">Home</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/about" class="block py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/about' ? 'text-primary' : ''">Tentang Kami</nuxt-link>
+              :class="route.path == '/about' ? 'text-primary' : 'text-gray-600'">Profile</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/services" class="block py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/services' ? 'text-primary' : ''">Layanan</nuxt-link>
+              :class="route.path == '/services' ? 'text-primary' : 'text-gray-600'">Services</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/contact" class="block py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/contact' ? 'text-primary' : ''">Kontak</nuxt-link>
+            <nuxt-link to="/contact"
+              class="text-white bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md px-3 py-2.5 text-center">Contact
+              Us</nuxt-link>
           </li>
         </ul>
       </div>
