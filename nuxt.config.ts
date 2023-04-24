@@ -12,7 +12,11 @@ export default defineNuxtConfig({
         },
         {
           name: 'description',
-          content: 'Dubai Real Estate'
+          content: 'Moving to Dubai, Invesing to Dubai, Visiting Dubai'
+        },
+        {
+          name: 'keywords',
+          content: 'Dubai, Moving to Dubai, Visiting Dubai, Real Estate, Investing, Investing in Dubai'
         }
       ]
     },
