@@ -11,17 +11,20 @@
         <p class="font-semibold text-xl mb-4 uppercase tracking-widest">Sheila Parubets</p>
         <p class="mb-8">REGIONAL OPERATIONS DIRECTOR, ASIA-PAC/MIDDLE EAST/AFRICA</p>
 
-        <p class="mb-4">Sheila has worked in global mobility for nearly a decade. She leads a team of compassionate and
-          committed consultant across Asia Pacific, the Middle East, and the UAE in particular.</p>
-        <p class="mb-4">She has a proven track record of working with international companies and employees at all levels
-          providing consultations for investment and business set up.</p>
-        <p class="mb-4">With personal experience as an expatriate living and working in a number of different countries
-          and as
-          property investor, she has chosen to follow her passion to share her knowledge, networks and support to
-          individuals
-          and business looking to seizing new opportunities.</p>
-        <p class="mb-4">Passionate about the of international mobility, relocation and property investment, Sheila likes
-          to be hands on and will be there for you in every step of the way.</p>
+        <p class="mb-4">
+          Sheila telah bekerja dalam mobilitas global selama hampir satu dekade.
+          Dia memimpin tim yang penuh kasih dan konsultan yang berkomitmen di seluruh Asia Pasifik, Timur Tengah, dan UEA
+          pada khususnya.</p>
+        <p class="mb-4">Dia memiliki rekam jejak yang terbukti dalam bekerja dengan perusahaan internasional dan karyawan
+          di semua tingkatan, memberikan konsultasi untuk investasi dan persiapan bisnis.</p>
+        <p class="mb-4">Dengan pengalaman pribadi sebagai ekspatriat yang tinggal dan bekerja di sejumlah negara yang
+          berbeda
+          dan sebagai
+          investor properti, dia telah memilih untuk mengikuti hasratnya untuk membagikan pengetahuannya, jaringan dan
+          dukungan untuk individu dan bisnis yang ingin meraih peluang baru.</p>
+        <p class="mb-4">
+          Berpassion tentang mobilitas internasional, relokasi dan investasi properti. Sheila senang
+          untuk membantu dan akan ada untuk Anda di setiap langkahnya.</p>
       </div>
     </div>
   </section>

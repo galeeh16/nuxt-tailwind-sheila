@@ -9,7 +9,7 @@
 html,
 body {
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  /* font-size: 0.98rem; */
   color: #373a3e;
   @apply bg-gray-50;
 }

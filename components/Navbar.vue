@@ -24,20 +24,20 @@
           class="flex flex-col lg:items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
           <li>
             <nuxt-link to="/" class="block py-2 pl-3 pr-4 rounded"
-              :class="route.path == '/' ? 'text-primary' : 'text-gray-600'">Home</nuxt-link>
+              :class="route.path == '/' ? 'text-primary' : 'text-gray-600'">Beranda</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/about" class="block py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/about' ? 'text-primary' : 'text-gray-600'">Profile</nuxt-link>
+              :class="route.path == '/about' ? 'text-primary' : 'text-gray-600'">Profil</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/services" class="block py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/services' ? 'text-primary' : 'text-gray-600'">Services</nuxt-link>
+              :class="route.path == '/services' ? 'text-primary' : 'text-gray-600'">Layanan</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/contact"
-              class="text-white bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md px-3 py-2.5 text-center">Contact
-              Us</nuxt-link>
+              class="text-white bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md px-3 py-2.5 text-center">Hubungi
+              Kami</nuxt-link>
           </li>
         </ul>
       </div>
