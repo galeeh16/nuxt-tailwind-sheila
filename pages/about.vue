@@ -13,7 +13,7 @@
 
         <p class="mb-4">
           Sheila telah bekerja dalam mobilitas global selama hampir satu dekade.
-          Dia memimpin tim yang penuh kasih dan konsultan yang berkomitmen di seluruh Asia Pasifik, Timur Tengah, dan UEA
+          Dia memimpin tim konsultan yang berkomitmen di seluruh Asia Pasifik, Timur Tengah, dan UEA
           pada khususnya.</p>
         <p class="mb-4">Dia memiliki rekam jejak yang terbukti dalam bekerja dengan perusahaan internasional dan karyawan
           di semua tingkatan, memberikan konsultasi untuk investasi dan persiapan bisnis.</p>
