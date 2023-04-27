@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   // ssr: false,
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       title: 'Rellocate Dubai',
       meta: [
         // <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -25,6 +28,7 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
     '@nuxtjs/i18n',
+    'nuxt-simple-sitemap',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
