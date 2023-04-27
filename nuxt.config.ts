@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     'nuxt-simple-sitemap',
+    '@nuxtjs/robots',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
