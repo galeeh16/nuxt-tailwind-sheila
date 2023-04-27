@@ -23,10 +23,35 @@ export default defineNuxtConfig({
   },
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxtjs/i18n',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config',
+  },
+  i18n: {
+    lazy: true,
+    langDir: 'lang',
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+    },
+    locales: [
+      {
+        code: 'en',
+        name: 'English(US)',
+        file: 'en-US.json'
+      },
+      {
+        code: 'id',
+        name: 'Indonesia',
+        file: 'id-ID.json'
+      }
+    ],
+    vueI18n: './i18n.config.js' // if you are using custom path, default 
   },
 });

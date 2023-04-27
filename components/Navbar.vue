@@ -1,10 +1,9 @@
 <template>
   <nav class="bg-white border-gray-200  py-4 lg:py-8 fixed z-30 top-0 left-0 right-0 md:block border-b border-b-gray-200">
     <div class="flex flex-wrap items-center justify-between" :class="container">
-      <a href="/" class="flex items-center">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold font-raleway whitespace-nowrap">Rellocate
-          Dubai</span>
+      <a :href="localePath('/')" class="flex items-center">
+        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
+        <span class="self-center text-2xl font-semibold font-raleway whitespace-nowrap">BrandName</span>
       </a>
 
       <button data-collapse-toggle="navbar-default" type="button"
@@ -23,21 +22,26 @@
         <ul
           class="flex flex-col lg:items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
           <li>
-            <nuxt-link to="/" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
-              :class="route.path == '/' ? 'text-primary' : 'text-gray-600'">Beranda</nuxt-link>
+            <nuxt-link :to="localePath('/')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
+              :class="route.path == localePath('/') ? 'text-primary' : 'text-gray-600'">{{ $t('home') }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/about" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/about' ? 'text-primary' : 'text-gray-600'">Profil</nuxt-link>
+            <nuxt-link :to="localePath('/about')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 text-gray-900 rounded"
+              :class="route.path == localePath('/about') ? 'text-primary' : 'text-gray-600'">{{ $t('profile')
+              }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/services" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 text-gray-900 rounded"
-              :class="route.path == '/services' ? 'text-primary' : 'text-gray-600'">Layanan</nuxt-link>
+            <nuxt-link :to="localePath('/services')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 text-gray-900 rounded"
+              :class="route.path == localePath('/services') ? 'text-primary' : 'text-gray-600'">{{ $t('services')
+              }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/contact"
-              class="text-white inline-block bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md px-3 py-2.5 text-center">Hubungi
-              Kami</nuxt-link>
+            <nuxt-link :to="localePath('/contact')"
+              class="text-white inline-block bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md mb-4 md:mb-0 px-3 py-2.5 text-center">{{
+                $t('contact_us') }}</nuxt-link>
+          </li>
+          <li>
+            <lang-switcher />
           </li>
         </ul>
       </div>
@@ -49,5 +53,7 @@
 import { container } from '../constants/style'
 
 const route = useRoute()
+
+// const localePath = useLocalePath()
 
 </script>

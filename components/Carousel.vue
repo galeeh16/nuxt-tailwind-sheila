@@ -7,9 +7,9 @@
           <img src="~/assets/images/dubai2.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
           <div
             class="px-5 py-4 lg:px-14 lg:py-8 text-gray-200 absolute bottom-[80px] md:bottom-[120px] lg:bottom-[200px] left-1/2 z-[5] bg-black/50 inline-flex rounded translate-x-[-50%] text-center font-bold text-3xl md:text-5xl lg:text-6xl">
-            Pindah ke Dubai?
+            {{ $t('move_to_dubai') }}
             <br class="mb-2 inline-block" />
-            Bicara dengan Kami
+            {{ $t('talk_to_us') }}
           </div>
         </div>
       </swiper-slide>
@@ -18,8 +18,8 @@
           <img src="~/assets/images/dubai1.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
           <div
             class="px-5 py-4 lg:px-14 lg:py-8 text-gray-200 absolute bottom-[80px] md:bottom-[120px] lg:bottom-[200px] left-1/2 z-[5] bg-black/50 inline-flex rounded translate-x-[-50%] text-center font-bold text-3xl md:text-5xl lg:text-6xl">
-            Invest di Dubai? <br class="mb-2" />
-            Bicara dengan Kami
+            {{ $t('invest_in_dubai') }} <br class="mb-2" />
+            {{ $t('talk_to_us') }}
           </div>
         </div>
       </swiper-slide>
@@ -28,8 +28,8 @@
           <img src="~/assets/images/dubai3.webp" class="h-[470px] lg:h-[780px] w-full object-cover" />
           <div
             class="px-5 py-4 lg:px-14 lg:py-8 text-gray-200 absolute bottom-[80px] md:bottom-[120px] lg:bottom-[200px] left-1/2 z-[5] bg-black/50 inline-flex rounded translate-x-[-50%] text-center font-bold text-3xl md:text-5xl lg:text-6xl">
-            Mengunjungi Dubai? <br class="mb-2" />
-            Bicara dengan Kami
+            {{ $t('visiting_dubai') }} <br class="mb-2" />
+            {{ $t('talk_to_us') }}
           </div>
         </div>
       </swiper-slide>
