@@ -1,8 +1,7 @@
 <template>
   <div class="mt-[97px]"></div>
   <section :class="container" class="pt-8 lg:pt-14">
-    <h3 class="text-center font-semibold text-primary lg:mb-12 text-xl lg:text-3xl font-raleway">Hubungi Kami
-    </h3>
+    <Heading3 :title="$t('contact_us')" />
 
     <div class="grid lg:grid-cols-2 gap-4 lg:gap-20 items-center pt-10">
       <div class="mb-12 flex justify-center">
@@ -12,29 +11,30 @@
 
       <div>
         <form @submit.prevent="handleSubmit" method="post" spellcheck="false">
-          <InputText type="text" label="Nama Lengkap *" v-model="contact.fullName" placeholder="Masukkan Nama Lengkap"
-            maxlength="50" :isInvalid="v$.fullName.$errors.length > 0">
+          <InputText type="text" :label="`${$t('contact_fullname') + ' *'}`" v-model="contact.fullName"
+            :placeholder="`${$t('contact_fullname_placeholder')}`" maxlength="50"
+            :isInvalid="v$.fullName.$errors.length > 0">
             <div v-if="v$.fullName.$errors.length > 0" class="text-red-500 mt-1 text-sm">
               {{ v$.fullName.$errors[0].$message }}
             </div>
           </InputText>
 
-          <InputText type="text" label="Email *" v-model="contact.email" placeholder="Masukkan Email"
-            :isInvalid="v$.pesan.$errors.length > 0">
+          <InputText type="text" :label="`${$t('contact_email') + ' *'}`" v-model="contact.email"
+            :placeholder="`${$t('contact_email_placeholder')}`" :isInvalid="v$.pesan.$errors.length > 0">
             <div v-if="v$.email.$errors.length > 0" class="text-red-500 mt-1 text-sm">
               {{ v$.email.$errors[0].$message }}
             </div>
           </InputText>
 
-          <InputText type="text" label="Nomor Handphone *" v-model="contact.noHp" placeholder="Masukkan Nomor Handphone"
-            :isInvalid="v$.noHp.$errors.length > 0">
+          <InputText type="text" :label="`${$t('contact_nohp') + ' *'}`" v-model="contact.noHp"
+            :placeholder="`${$t('contact_nohp_placeholder')}`" :isInvalid="v$.noHp.$errors.length > 0">
             <div v-if="v$.noHp.$errors.length > 0" class="text-red-500 mt-1 text-sm">
               {{ v$.noHp.$errors[0].$message }}
             </div>
           </InputText>
 
-          <InputArea label="Pesan *" v-model="contact.pesan" placeholder="Masukkan Pesan"
-            :isInvalid="v$.pesan.$errors.length > 0">
+          <InputArea :label="`${$t('contact_message') + ' *'}`" v-model="contact.pesan"
+            :placeholder="`${$t('contact_message')}`" :isInvalid="v$.pesan.$errors.length > 0">
             <div v-if="v$.pesan.$errors.length > 0" class="text-red-500 mt-1 text-sm">
               {{ v$.pesan.$errors[0].$message }}
             </div>
@@ -54,9 +54,12 @@
 import { container } from '~/constants/style'
 import useVuelidate from '@vuelidate/core'
 import { required, email, helpers, minLength, maxLength, numeric } from '@vuelidate/validators';
+import { requiredMsg, minLengthMsg, maxLengthMsg, emailMsg, numericMsg } from '../constants/localeMessageValidator'
+
+const { t } = useI18n()
 
 useHead({
-  title: 'Rellocate Dubai - Contact Us'
+  title: `Bisnis Di Dubai - ${t('contact_us')}`
 })
 
 const contact = ref({
@@ -66,27 +69,29 @@ const contact = ref({
   pesan: ''
 })
 
+const lang = useCookie('i18n_redirected').value || 'en'
+
 const rules = {
   fullName: {
-    required: helpers.withMessage('Harap isi Nama Lengkap', required),
-    minLength: helpers.withMessage(({ $params }) => `Nama Lengkap minimal ${$params.min} karakter`, minLength(3)),
-    maxLength: helpers.withMessage(({ $params }) => `Nama Lengkap maksimal ${$params.max} karakter`, maxLength(50)),
+    required: helpers.withMessage(requiredMsg(lang, t('contact_fullname')), required),
+    minLength: helpers.withMessage(({ $params }) => minLengthMsg(lang, t('contact_fullname'), $params), minLength(3)),
+    maxLength: helpers.withMessage(({ $params }) => maxLengthMsg(lang, t('contact_fullname'), $params), maxLength(50)),
     $autoDirty: true
   },
   email: {
-    required: helpers.withMessage('Harap isi Email', required),
-    email: helpers.withMessage('Email tidak valid', email),
+    required: helpers.withMessage(requiredMsg(lang, t('contact_email')), required),
+    email: helpers.withMessage(emailMsg(lang, t('contact_email')), email),
     $autoDirty: true,
   },
   noHp: {
-    required: helpers.withMessage('Harap isi Nomor Handphone', required),
-    numeric: helpers.withMessage('Nomor Handphone tidak valid', numeric),
-    minLength: helpers.withMessage(({ $params }) => `Nomor Handphone minimal ${$params.min} karakter`, minLength(10)),
-    maxLength: helpers.withMessage(({ $params }) => `Nomor Handphone maksimal ${$params.max} karakter`, maxLength(15)),
+    required: helpers.withMessage(requiredMsg(lang, t('contact_nohp')), required),
+    numeric: helpers.withMessage(numericMsg(lang, t('contact_nohp')), numeric),
+    minLength: helpers.withMessage(({ $params }) => minLengthMsg(lang, t('contact_nohp'), $params), minLength(10)),
+    maxLength: helpers.withMessage(({ $params }) => maxLengthMsg(lang, t('contact_nohp'), $params), maxLength(15)),
     $autoDirty: true,
   },
   pesan: {
-    required: helpers.withMessage('Harap isi Pesan', required),
+    required: helpers.withMessage(requiredMsg(lang, t('contact_message')), required),
     $autoDirty: true,
   },
 }

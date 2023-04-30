@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      title: 'Rellocate Dubai',
+      title: 'Bisnis Di Dubai',
       meta: [
         // <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         {
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'keywords',
-          content: 'Dubai, Moving to Dubai, Visiting Dubai, Real Estate, Investing, Investing in Dubai'
+          content: 'Dubai, Bisnis di Dubai, Moving to Dubai, Visiting Dubai, Real Estate, Investing, Investing in Dubai'
         }
       ]
     },

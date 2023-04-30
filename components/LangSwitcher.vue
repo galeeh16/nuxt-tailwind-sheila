@@ -25,15 +25,15 @@
             <ListboxOption v-slot="{ active, selected }" v-for="lang in languages" :key="lang.name" :value="lang"
               as="template">
               <li :class="[
-                active ? 'bg-orange-50 text-amber-900' : 'text-gray-900',
-                selected ? 'bg-orange-50 text-amber-900' : '',
-                'relative cursor-pointer select-none py-2 pl-3 pr-3',
-              ]">
+                  active ? 'bg-orange-50 text-amber-900' : 'text-gray-900',
+                  selected ? 'bg-orange-50 text-amber-900' : '',
+                  'relative cursor-pointer select-none py-2 pl-3 pr-3',
+                ]">
                 <div class="flex items-center gap-2">
                   <span v-html="lang.icon"></span>
                   <span :class="[
-                    'block truncate font-medium',
-                  ]">{{ lang.name }}</span>
+                      'block truncate font-medium',
+                    ]">{{ lang.name }}</span>
                   <!-- <span v-if="selected" class="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
                     <Icon name="bi:check-lg" class="text-xl" />
                   </span> -->
@@ -86,7 +86,16 @@ const languages = [
           </svg>`
   }
 ]
+// const selectedLang = ref(useCookie('i18n_redirected').value === 'id' ? languages[1] : languages[0])
 const selectedLang = ref(useCookie('i18n_redirected').value === 'id' ? languages[1] : languages[0])
+
+// const lastPath = 
+
+onMounted(() => {
+  if (selectedLang.value.code === 'id') {
+    router.push(switchLocalePath('id'))
+  }
+})
 
 
 

@@ -32,5 +32,19 @@
 
   "home_visiting": "Visiting Dubai",
   "home_visiting_desc_1": "We support individuals, families and corporate needs to get the best out of your stay in Dubai. We are here to support you whether you are just simply looking for advice or whether you are needing full support in arranging and managing all aspects of your stay. We are here to help.",
-  "home_visiting_desc_2": "We know how stressful it can be to plan, we asses the unique requirement of each client. Our team offer practical advise and solutions for absolutely every aspect of your move and minimize. We pride ourselves on our ability to help individual ,families and corporate to make a decision , minimize stress and reducing unnecessary expenses."
+  "home_visiting_desc_2": "We know how stressful it can be to plan, we asses the unique requirement of each client. Our team offer practical advise and solutions for absolutely every aspect of your move and minimize. We pride ourselves on our ability to help individual ,families and corporate to make a decision , minimize stress and reducing unnecessary expenses.",
+
+  "about_desc_1": "Sheila has worked in global mobility for nearly a decade. She leads a team of compassionate and committed consultant across Asia Pacific, the Middle East, and the UAE in particular.",
+  "about_desc_2": "She has a proven track record of working with international companies and employees at all levels providing consultations for investment and business set up.",
+  "about_desc_3": "With personal experience as an expatriate living and working in a number of different countries and as property investor, she has chosen to follow her passion to share her knowledge, networks and support to individuals and business looking to seizing new opportunities.",
+  "about_desc_4": "Passionate about the of international mobility, relocation and property investment, Sheila likes to be hands on  and will be there for you in every step of the way.",
+
+  "contact_fullname": "Full Name",
+  "contact_fullname_placeholder": "Enter Full Name",
+  "contact_email": "Email",
+  "contact_email_placeholder": "Enter Email",
+  "contact_nohp": "Phone Number",
+  "contact_nohp_placeholder": "Enter Phone Number",
+  "contact_message": "Message",
+  "contact_message_placeholder": "Enter Message"
 }
