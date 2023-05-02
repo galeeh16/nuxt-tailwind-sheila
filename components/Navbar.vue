@@ -3,7 +3,7 @@
     <div class="flex flex-wrap items-center justify-between" :class="container">
       <a :href="localePath('/')" class="flex items-center">
         <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
-        <span class="self-center text-2xl font-semibold font-raleway whitespace-nowrap">BrandName</span>
+        <span class="self-center text-2xl font-bold font-raleway whitespace-nowrap text-primary">BisnisDiDubai</span>
       </a>
 
       <button data-collapse-toggle="navbar-default" type="button"
@@ -26,12 +26,12 @@
               :class="route.path == localePath('/') ? 'text-primary' : 'text-gray-600'">{{ $t('home') }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath('/about')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 text-gray-900 rounded"
+            <nuxt-link :to="localePath('/about')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
               :class="route.path == localePath('/about') ? 'text-primary' : 'text-gray-600'">{{ $t('profile')
               }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath('/services')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 text-gray-900 rounded"
+            <nuxt-link :to="localePath('/services')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
               :class="route.path == localePath('/services') ? 'text-primary' : 'text-gray-600'">{{ $t('services')
               }}</nuxt-link>
           </li>

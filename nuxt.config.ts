@@ -59,4 +59,10 @@ export default defineNuxtConfig({
     ],
     vueI18n: './i18n.config.js' // if you are using custom path, default 
   },
+  // Recommended 
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://bisnisdidubai.com',
+    }
+  },
 });

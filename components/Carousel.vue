@@ -1,7 +1,7 @@
 <template>
   <ClientOnly>
-    <swiper :modules="modules" :slides-per-view="1" :space-between="50" navigation :pagination="{ clickable: true }"
-      effect="fade" :scrollbar="{ draggable: true, hide: true }" :loop="true">
+    <swiper :modules="modules" :slides-per-view="1" :space-between="50" navigation effect="fade"
+      :scrollbar="{ draggable: true, hide: false }" :loop="true">
       <swiper-slide>
         <div class="relative">
           <img src="~/assets/images/dubai2.webp" alt="dubai1" class="h-[470px] lg:h-[780px] w-full object-cover" />
