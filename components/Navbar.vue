@@ -1,12 +1,11 @@
 <template>
-  <nav class="bg-white border-gray-200  py-4 lg:py-8 fixed z-30 top-0 left-0 right-0 md:block border-b border-b-gray-200">
+  <nav class="bg-darkBlue border-gray-200 py-2 lg:py-4 fixed z-30 top-0 left-0 right-0 md:block">
     <div class="flex flex-wrap items-center justify-between" :class="container">
       <a :href="localePath('/')" class="flex items-center">
-        <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
-        <span class="self-center text-2xl font-bold font-raleway whitespace-nowrap text-primary">BisnisDiDubai</span>
+        <img src="/BisnisDiDubai_Logo.png" class="h-[50px] md:h-[66px] lg:h-[80px]" alt="BisnisDiDubai Logo">
       </a>
 
-      <button data-collapse-toggle="navbar-default" type="button"
+      <button data-collapse-toggle="navbar-default" type="button" id="button-hamburger-menu"
         class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -18,26 +17,30 @@
         </svg>
       </button>
 
-      <div class="hidden w-full bg-white md:block md:w-auto" id="navbar-default">
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="flex flex-col lg:items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
+          class="flex flex-col lg:items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
-            <nuxt-link :to="localePath('/')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
-              :class="route.path == localePath('/') ? 'text-primary' : 'text-gray-600'">{{ $t('home') }}</nuxt-link>
+            <nuxt-link :to="localePath('/')" @click="goTo(localePath('/'))"
+              class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded cursor-pointer"
+              :class="route.path == localePath('/') ? 'text-primary' : 'text-gray-400'">{{ $t('home') }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath('/about')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
-              :class="route.path == localePath('/about') ? 'text-primary' : 'text-gray-600'">{{ $t('profile')
+            <nuxt-link :to="localePath('/about')" @click="goTo(localePath('/about'))"
+              class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded cursor-pointer"
+              :class="route.path == localePath('/about') ? 'text-primary' : 'text-gray-400'">{{ $t('profile')
               }}</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath('/services')" class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded"
-              :class="route.path == localePath('/services') ? 'text-primary' : 'text-gray-600'">{{ $t('services')
-              }}</nuxt-link>
+            <nuxt-link :to="localePath('/services')" @click="goTo(localePath('/services'))"
+              class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded cursor-pointer"
+              :class="route.path == localePath('/services') ? 'text-primary' : 'text-gray-400'">{{ $t('services') }}
+            </nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="localePath('/contact')"
-              class="text-white inline-block bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md mb-4 md:mb-0 px-3 py-2.5 text-center">{{
+            <nuxt-link :to="localePath('/contact')" @click="goTo(localePath('/contact'))"
+              class="text-white inline-block bg-primary hover:bg-primaryHover focus:outline-none text-sm rounded-md mb-4 md:mb-0 px-3 py-2.5 text-center cursor-pointer">
+              {{
                 $t('contact_us') }}</nuxt-link>
           </li>
           <li>
@@ -53,7 +56,16 @@
 import { container } from '../constants/style'
 
 const route = useRoute()
+const router = useRouter()
 
-// const localePath = useLocalePath()
+function goTo(path) {
+  const currentWidth = window.innerWidth
+  if (currentWidth < 768) {
+    let b = document.getElementById('button-hamburger-menu')
+    b.click()
+  }
+
+  router.push(path)
+}
 
 </script>

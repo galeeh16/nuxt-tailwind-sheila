@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[97px]"></div>
+  <div class="mt-[60px] lg:mt-[97px]"></div>
   <section :class="container" class="pt-8 lg:pt-14">
     <Heading3 :title="$t('contact_us')" />
 
@@ -20,7 +20,7 @@
           </InputText>
 
           <InputText type="text" :label="`${$t('contact_email') + ' *'}`" v-model="contact.email"
-            :placeholder="`${$t('contact_email_placeholder')}`" :isInvalid="v$.pesan.$errors.length > 0">
+            :placeholder="`${$t('contact_email_placeholder')}`" :isInvalid="v$.email.$errors.length > 0">
             <div v-if="v$.email.$errors.length > 0" class="text-red-500 mt-1 text-sm">
               {{ v$.email.$errors[0].$message }}
             </div>

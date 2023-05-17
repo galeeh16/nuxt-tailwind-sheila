@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   i18n: {
     lazy: true,
     langDir: 'lang',
-    defaultLocale: 'en',
+    defaultLocale: 'id',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
       alwaysRedirect: true,

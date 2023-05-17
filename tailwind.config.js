@@ -15,6 +15,7 @@ module.exports = {
         primary: '#ef5744',
         primaryHover: '#cf4d3e',
         softPrimary: 'rgba(239, 87, 68, .2)',
+        darkBlue: '#13161c'
       },
       fontFamily: {
         raleway: ['"Raleway"', 'sans-serif'],

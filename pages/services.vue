@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[97px]"></div>
+  <div class="mt-[60px] lg:mt-[97px]"></div>
   <section :class="container" class="pt-8 lg:pt-14">
     <Heading3 title="Layanan Kami" />
 
