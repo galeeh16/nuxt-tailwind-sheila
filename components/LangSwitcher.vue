@@ -33,13 +33,17 @@ const { setLocale, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const router = useRouter()
-const selectedLang = ref(useCookie('i18n_redirected').value == 'id' ? 'id' : 'en')
+const selectedLang = ref(useCookie('i18n_redirected').value == 'en' ? 'en' : 'id')
 
-onMounted(() => {
-  if (selectedLang.value.code === 'en') {
-    router.push(switchLocalePath('en'))
-  }
-})
+if (selectedLang.value === 'en') {
+  router.push(switchLocalePath('en'))
+}
+
+// onMounted(() => {
+//   if (selectedLang.value === 'en') {
+//     router.push(switchLocalePath('en'))
+//   }
+// })
 
 function switchLang(lang) {
   setLocale(lang)
