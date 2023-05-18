@@ -19,7 +19,7 @@
 
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
         <ul
-          class="flex flex-col lg:items-center p-4 md:p-0 mt-4 bg-gray-900 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          class="flex flex-col lg:items-center p-4 md:p-0 mt-4 md:bg-black bg-gray-900 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
             <nuxt-link :to="localePath('/')" @click="goTo(localePath('/'))"
               class="block mb-4 md:mb-0 py-2 pl-3 pr-4 rounded cursor-pointer"
