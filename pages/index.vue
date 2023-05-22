@@ -171,9 +171,9 @@
 
 <script setup>
 import { container } from '~/constants/style';
-import DubaiInvest from '@/assets/images/home/dubai_invest.webp'
-import DubaiRellocate from '@/assets/images/home/dubai_rellocating.webp'
-import DubaiBusiness from '@/assets/images/home/dubai_business.webp'
-import DubaiVisit from '@/assets/images/home/dubai_visit.webp'
+import DubaiInvest from '/home/dubai_invest.webp'
+import DubaiRellocate from '/home/dubai_rellocating.webp'
+import DubaiBusiness from '/home/dubai_business.webp'
+import DubaiVisit from '/home/dubai_visit.webp'
 
 </script>
