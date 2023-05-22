@@ -46,5 +46,7 @@
   "contact_nohp": "Phone Number",
   "contact_nohp_placeholder": "Enter Phone Number",
   "contact_message": "Message",
-  "contact_message_placeholder": "Enter Message"
+  "contact_message_placeholder": "Enter Message",
+
+  "our_services": "Our Services"
 }

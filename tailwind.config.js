@@ -19,6 +19,7 @@ module.exports = {
       },
       fontFamily: {
         raleway: ['"Raleway"', 'sans-serif'],
+        latin: ['"Charm"', 'sans-serif']
       },
     },
   },
