@@ -10,13 +10,14 @@
     <div class="rounded-2xl">
       <template v-for="service in services" :key="service.id">
         <Disclosure v-slot="{ open }">
+
           <DisclosureButton
             class="flex mt-4 w-full items-center justify-between rounded-lg bg-slate-700 px-4 py-3 md:px-6 md:py-4 text-leftfont-medium text-white-300 hover:bg-slate-700/80 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
             <span class="font-latin text-xl md:text-2xl lg:text-3xl">{{ service.heading }}</span>
-            <!-- <ChevronUpIcon :class="open ? 'rotate-180 transform' : ''" class="h-5 w-5 text-purple-500" /> -->
             <Icon name="bi:chevron-down" :class="open ? 'rotate-180 transform' : ''"
               class="h-5 w-5 md:h-7 md:w-7 transition duration-300" />
           </DisclosureButton>
+
           <transition enter-active-class="transition duration-300 ease-out"
             enter-from-class="transform fade-out opacity-0" enter-to-class="transform fade-in opacity-300"
             leave-active-class="transition duration-200 ease-out" leave-from-class="transform fade-in opacity-300"
@@ -27,6 +28,7 @@
               </ul>
             </DisclosurePanel>
           </transition>
+
         </Disclosure>
       </template>
     </div>
