@@ -12,7 +12,7 @@
         <Disclosure v-slot="{ open }">
 
           <DisclosureButton
-            class="flex mt-4 w-full items-center justify-between rounded-lg bg-slate-700 px-4 py-3 md:px-6 md:py-4 text-leftfont-medium text-white-300 hover:bg-slate-700/80 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+            class="flex mt-4 lg:mt-6 w-full items-center justify-between rounded-lg bg-slate-700 px-4 py-3 md:px-6 md:py-4 text-leftfont-medium text-white-300 hover:bg-slate-700/80 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
             <span class="font-latin text-xl md:text-2xl lg:text-3xl">{{ service.heading }}</span>
             <Icon name="bi:chevron-down" :class="open ? 'rotate-180 transform' : ''"
               class="h-5 w-5 md:h-7 md:w-7 transition duration-300" />
@@ -22,7 +22,7 @@
             enter-from-class="transform fade-out opacity-0" enter-to-class="transform fade-in opacity-300"
             leave-active-class="transition duration-200 ease-out" leave-from-class="transform fade-in opacity-300"
             leave-to-class="transform fade-out opacity-0">
-            <DisclosurePanel class="px-4 pt-4 pb-2 lg:text-lg">
+            <DisclosurePanel class="px-4 pt-4 pb-2 text-base lg:text-lg">
               <ul class="pl-3 ml-0" style="list-style-type: '- ';">
                 <li class="mb-2" v-for="list in service.lists" :key="list.id">{{ list.value }}</li>
               </ul>
@@ -43,8 +43,10 @@ import {
   DisclosurePanel,
 } from '@headlessui/vue';
 
+const { t } = useI18n()
+
 useHead({
-  title: 'Rellocate Dubai - Services'
+  title: `Bisnis Di Dubai - ${t('our_services')}`
 })
 
 const services = [
