@@ -2,7 +2,7 @@
   <nav class="bg-black border-gray-200 py-2 lg:py-4 fixed z-30 top-0 left-0 right-0 md:block">
     <div class="flex flex-wrap items-center justify-between" :class="container">
       <a :href="localePath('/')" class="flex items-center">
-        <img src="/BisnisDiDubai_Logo.png" class="h-[50px] md:h-[66px] lg:h-[80px]" alt="BisnisDiDubai Logo">
+        <img src="/BisnisDiDubai_Logo-2.png" class="h-[50px] md:h-[66px] lg:h-[80px]" alt="BisnisDiDubai Logo">
       </a>
 
       <button data-collapse-toggle="navbar-default" type="button" id="button-hamburger-menu"
